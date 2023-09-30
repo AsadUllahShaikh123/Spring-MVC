@@ -7,6 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Hello from Login Jsp</h1>
+	<% String name = (String) request.getAttribute("userName"); 
+	
+	   String password = (String) request.getAttribute("password");
+	%>
+	<h1> User Name :  <%= name %></h1>
+	<h2> Password  : <%= password %></h2>
+	<a href="home">Go to Home </a>
+	
 </body>
 </html>
