@@ -2,10 +2,17 @@ package com.spring_mvc.model;
 
 public class Student {
 
+	private int id;
 	private String name;
 	private String email;
 	private String address;
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}
@@ -26,7 +33,7 @@ public class Student {
 	}
 	@Override
 	public String toString() {
-		return "Student [name=" + name + ", email=" + email + ", address=" + address + "]";
+		return "Student [id=" + id + ", name=" + name + ", email=" + email + ", address=" + address + "]";
 	}
 	
 	

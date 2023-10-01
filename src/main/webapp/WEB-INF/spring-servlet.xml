@@ -20,6 +20,19 @@ xsi:schemaLocation="
 		<property name="suffix" value=".jsp"/>
 	</bean>
 	
+	<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+		<constructor-arg value="jdbc:mysql://localhost:3306/spring_mvc"/>
+		<constructor-arg value="root"/>
+		<constructor-arg value="Admin"/>
+		
+	</bean>
 	
+	<bean id="jdbc_template" class="org.springframework.jdbc.core.JdbcTemplate">
+		<!-- 		<constructor-arg ref="data_source"/>  -->
+		
+		<property name="dataSource" ref="ds"/>
+	</bean>
 	
 </beans> 
